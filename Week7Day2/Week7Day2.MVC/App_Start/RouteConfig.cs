@@ -18,6 +18,17 @@ namespace Week7Day2.MVC
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Classmates",
+                url: "{controller}/{action}",
+                defaults: new
+                    {
+                    controller = "classmates",
+                    action = "List"
+                    }
+            );
+
         }
     }
 }
